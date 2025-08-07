@@ -21,7 +21,7 @@ class Star_Field:
     def __init__(self, width, height, depth = 30 , star_num = 800):
         self.master = Tk()
         self.master.title("Star Field")
-        self.master.resizable(False, False)
+        #self.master.resizable(False, False)
         self.master.maxsize(width, height)
         self.stars = []
         self.fov = 180 * math.pi / 180
@@ -69,4 +69,4 @@ class Star_Field:
         self.canvas.after(30, self.draw)
 
 if __name__ ==  '__main__':
-    s = Star_Field(800, 600)
+    s = Star_Field(1500, 800)
