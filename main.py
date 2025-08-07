@@ -1,6 +1,7 @@
 import math 
 from random import randrange
 from tkinter import Canvas, Tk, mainloop
+import pygame
 
 class Star:
 
@@ -33,6 +34,9 @@ class Star_Field:
         self.canvas = Canvas(self.master, width = width, height = height , bg = "#000000")
         self.canvas.pack()
 
+        pygame.mixer.init()
+        pygame.mixer.music.load("assets\music.mp3")
+        pygame.mixer.music.play(-1)
 
         for i in range(star_num):
             star = Star(x = randrange(-self.width, self.width),
